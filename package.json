@@ -1,0 +1,31 @@
+{
+  "name": "",
+  "private": true,
+  "version": "0.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "init": "git flow init -d && npm install -g npm-check-updates && npm install",
+    "update": "rm -rf node_modules && ncu -u && npm install",
+    "preinstall": "npm cache clean"
+  },
+  "dependencies": {
+    "babel-runtime": "^5.8.20"
+  },
+  "devDependencies": {
+  },
+  "engines": {
+    "iojs": ">=3.3.0"
+  },
+  "babel": {
+    "stage": 0,
+    "loose": "all",
+    "optional": [
+      "runtime",
+      "minification.constantFolding"
+    ]
+  }
+}
