@@ -36,5 +36,8 @@
       "runtime",
       "minification.constantFolding"
     ]
+  },
+  "semistandard": {
+    "parser": "babel-eslint"
   }
 }
