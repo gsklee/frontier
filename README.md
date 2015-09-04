@@ -1,14 +1,26 @@
-Libstack: Frontend
-==================
+Frontier
+========
 
-Prerequisites
--------------
+**Frontier** is a front-tier frontend libstack. No pun intended.
 
-**Libstack: Frontend** assumes you're using the following development tools:
+It's the sum-up of the following cutting-edge frontend art:
 
-* An OS X environment
+* [Babel](https://github.com/babel/babel)
+* [React](https://github.com/facebook/react)
+* [Webpack](https://github.com/webpack/webpack)
+* [ESLint](https://github.com/eslint/eslint)
+* [JavaScript Semi-Standard Style](https://github.com/Flet/semistandard)
+
+Recommended Environment
+-----------------------
+
+The setup instructions below assume you're using the following tools for development:
+
+* OS X
 * [Homebrew](http://brew.sh/)
 * [Atom](https://atom.io/)
+
+They're not requirements, and you can still use the libstack in your most comfortable environment with some slight modifications to the setup process.
 
 Setup
 -----
@@ -16,6 +28,7 @@ Setup
 ### Install Node Environment
 
 ```bash
+# Replace [LATEST_VERSION] with the latest version number
 $ curl -o- https://raw.githubusercontent.com/creationix/nvm/[LATEST_VERSION]/install.sh | bash
 $ nvm install iojs
 $ nvm alias default iojs
