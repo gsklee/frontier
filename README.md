@@ -1,6 +1,15 @@
 Libstack: Frontend
 ==================
 
+Prerequisites
+-------------
+
+**Libstack: Frontend** assumes you're using the following development tools:
+
+* An OS X environment
+* [Homebrew](http://brew.sh/)
+* [Atom](https://atom.io/)
+
 Setup
 -----
 
@@ -16,6 +25,12 @@ $ nvm alias default iojs
 
 ```bash
 $ brew install git git-flow-avh
+```
+
+### Install Atom Packages
+
+```bash
+$ apm install editorconfig linter linter-js-standard
 ```
 
 ### Init the Project
