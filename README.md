@@ -3,13 +3,15 @@ Frontier
 
 **Frontier** is a front-tier frontend libstack. No pun intended.
 
-It's the sum-up of the following cutting-edge frontend art:
+It's the amalgam of the following cutting-edge frontend technologies, all wired up in a clean, orderly manner:
 
-* [Babel](https://github.com/babel/babel)
-* [React](https://github.com/facebook/react)
-* [Webpack](https://github.com/webpack/webpack)
-* [ESLint](https://github.com/eslint/eslint)
-* [JavaScript Semi-Standard Style](https://github.com/Flet/semistandard)
+* [**Babel**](https://github.com/babel/babel): Cutting-edge ECMAScript
+* [**React**](https://github.com/facebook/react): Cutting-edge UI Renderer
+* [**Webpack**](https://github.com/webpack/webpack): Cutting-edge Frontend Modulizer
+* [**ESLint**](https://github.com/eslint/eslint): Cutting-edge ECMAScript Linter
+* [**JavaScript Semi-Standard Style**](https://github.com/Flet/semistandard): Cutting-edge ECMAScript Style Enforcer
+
+Simply clone the repo to jump-start your own project with everything in place!
 
 Recommended Environment
 -----------------------
@@ -51,3 +53,13 @@ $ apm install editorconfig linter linter-js-standard
 ```bash
 $ npm run init
 ```
+
+Blanks
+------
+
+| File | Line:Column |
+| ---- | ----------- |
+| package.json | 2:12 |
+|              | 5:19 |
+|              | 8:13 |
+| source/index.html | 6:12 |
