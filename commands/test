@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+semistandard $(git diff --staged --name-only --diff-filter=AM)

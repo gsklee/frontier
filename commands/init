@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+git flow init -d
+npm install -g npm-check-updates babel-eslint semistandard
+npm install
