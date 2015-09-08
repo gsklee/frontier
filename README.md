@@ -48,6 +48,10 @@ $ brew install git git-flow-avh
 $ apm install editorconfig linter linter-js-standard
 ```
 
+Set the style to Semi-Standard in `linter-js-standard`:
+
+![http://i.imgur.com/G902DLS.png](http://i.imgur.com/G902DLS.png)
+
 ### Init the Project
 
 ```bash
@@ -58,7 +62,7 @@ Blanks
 ------
 
 | File | Line:Column |
-| ---- | ----------- |
+| :--: | :---------: |
 | package.json | 2:12 |
 |              | 5:19 |
 |              | 8:13 |
