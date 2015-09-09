@@ -4,48 +4,46 @@ version = "0.0.0"
 description = ""
 
 [repository]
-
-type = "git"
-url = ""
+  type = "git"
+  url = ""
 
 [scripts]
-
-init = "./commands/init"
-update = "./commands/update"
-preinstall = "npm cache clean"
-precommit = "npm test"
-test = "./commands/test"
+  init = "./commands/init" # $ npm run init
+  update = "./commands/update" # $ npm run update
+  preinstall = "npm cache clean"
+  precommit = "npm test"
+  test = "./commands/test" # $ npm test
 
 [dependencies]
+  # ECMAScript 2015+
+  babel = "^5.8.23" # babel/polyfill
 
-normalize.css = "^3.0.3"
+  # React
+  react = "0.14.0-beta3"
+  react-dom = "0.14.0-beta3"
+  classnames = "^2.1.3"
 
-babel = "^5.8.23"
-babel-runtime = "^5.8.20"
-
-react = "0.14.0-beta3"
-react-dom = "0.14.0-beta3"
-classnames = "^2.1.3"
+  # CSS
+  normalize.css = "^3.0.3"
 
 [devDependencies]
+  # Webpack
+  webpack = "^1.12.1"
+  babel-runtime = "^5.8.20"
 
-webpack = "^1.12.1"
-
-husky = "^0.10.1"
+  # Git Hooks
+  husky = "^0.10.1"
 
 [engines]
-
-iojs = ">=3.3.0"
+  iojs = ">=3.3.0"
 
 [babel]
-
-stage = 0
-loose = "all"
-optional = [
-  "runtime",
-  "minification.constantFolding"
-]
+  stage = 0
+  loose = "all"
+  optional = [
+    "runtime",
+    "minification.constantFolding"
+  ]
 
 [semistandard]
-
-parser = "babel-eslint"
+  parser = "babel-eslint"

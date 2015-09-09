@@ -15,18 +15,15 @@
     "test": "./commands/test"
   },
   "dependencies": {
-    "normalize.css": "^3.0.3",
-
     "babel": "^5.8.23",
-    "babel-runtime": "^5.8.20",
-
     "react": "0.14.0-beta3",
     "react-dom": "0.14.0-beta3",
-    "classnames": "^2.1.3"
+    "classnames": "^2.1.3",
+    "normalize.css": "^3.0.3"
   },
   "devDependencies": {
     "webpack": "^1.12.1",
-
+    "babel-runtime": "^5.8.20",
     "husky": "^0.10.1"
   },
   "engines": {
@@ -42,5 +39,21 @@
   },
   "semistandard": {
     "parser": "babel-eslint"
+  },
+  "#comments": {
+    "scripts": {
+      "init": ["", "$ npm run init"],
+      "update": ["", "$ npm run update"],
+      "test": ["", "$ npm test"]
+    },
+    "dependencies": {
+      "babel": ["ECMAScript 2015+", "babel/polyfill"],
+      "react": ["React", ""],
+      "normalize.css": ["CSS", ""]
+    },
+    "devDependencies": {
+      "webpack": ["Webpack", ""],
+      "husky": ["Git Hooks", ""]
+    }
   }
 }
