@@ -29,9 +29,7 @@ Serves the files emitted from Webpack over Express.
 
 */
 
-app.use(webpackDevMiddleware(compiler, {
-  publicPath: WEBPACK_CONFIG.output.publicPath
-}));
+app.use(WebpackDevMiddleware(compiler));
 
 /*
 
@@ -51,7 +49,7 @@ Configure Routing
 */
 
 app.get('*', (request, response, next) =>
-  response.sendFile(path.join(__dirname, 'source/index.html'))
+  response.sendFile(path.join(global.__projectRoot, 'source/index.html'))
 );
 
 /*

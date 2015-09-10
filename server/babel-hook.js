@@ -12,6 +12,8 @@ Do not use ES6 Import/Export because:
 
 require('babel-core/register');
 
+global.__projectRoot = require('path').resolve(__dirname, '..');
+
 module.exports = require({
   [__filename]: './server'
 }[process.argv[1]]);
