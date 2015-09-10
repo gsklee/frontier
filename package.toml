@@ -18,6 +18,7 @@ description = ""
 [dependencies]
   # ECMAScript 2015+
   babel-core = "^5.8.23" # babel-core/polyfill
+  bound-native-methods = "^0.1.6"
 
   # React
   react = "0.14.0-beta3"
