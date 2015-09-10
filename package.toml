@@ -16,7 +16,7 @@ description = ""
 
 [dependencies]
   # ECMAScript 2015+
-  babel = "^5.8.23" # babel/polyfill
+  babel-core = "^5.8.23" # babel-core/polyfill
 
   # React
   react = "0.14.0-beta3"
@@ -30,6 +30,18 @@ description = ""
   # Webpack
   webpack = "^1.12.1"
   babel-runtime = "^5.8.20"
+  babel-loader = "^5.3.2"
+
+  # Development Server
+  express = "^4.13.3"
+  webpack-dev-middleware = "^1.2.0"
+  webpack-hot-middleware = "^2.0.0"
+
+  # Hot Reload
+  babel-plugin-react-transform = "^1.0.3"
+  react-transform-webpack-hmr = "^0.1.4"
+  react-transform-catch-errors = "^0.1.1"
+  redbox-react = "^1.0.3"
 
   # Git Hooks
   husky = "^0.10.1"
@@ -44,6 +56,20 @@ description = ""
     "runtime",
     "minification.constantFolding"
   ]
+  plugins = [
+    "react-transform"
+  ]
+
+  [babel.extra]
+
+    [[react-transform]]
+      target = "react-transform-webpack-hmr"
+      imports = ["react"]
+      locals = ["module"]
+
+    [[react-transform]]
+      target = "react-transform-catch-errors"
+      imports = ["react", "redbox-react"]
 
 [semistandard]
   parser = "babel-eslint"
