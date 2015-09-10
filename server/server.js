@@ -7,15 +7,15 @@ Development Server
 
 import path from 'path';
 
-import express from 'express';
-import webpack from 'webpack';
-import webpackDevMiddleware from 'webpack-dev-middleware';
-import webpackHotMiddleware from 'webpack-hot-middleware';
+import Express from 'express';
+import Webpack from 'webpack';
+import WebpackDevMiddleware from 'webpack-dev-middleware';
+import WebpackHotMiddleware from 'webpack-hot-middleware';
 
 import WEBPACK_CONFIG from 'configs/webpack';
 
-const app = express();
-const compiler = webpack(WEBPACK_CONFIG);
+const app = Express();
+const compiler = Webpack(WEBPACK_CONFIG);
 const port = 5566;
 
 /*
@@ -41,7 +41,7 @@ Enable [Hot Module Replacement](http://webpack.github.io/docs/hot-module-replace
 
 */
 
-app.use(webpackHotMiddleware(compiler));
+app.use(WebpackHotMiddleware(compiler));
 
 /*
 
