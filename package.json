@@ -12,7 +12,8 @@
     "update": "./commands/update",
     "preinstall": "npm cache clean",
     "precommit": "npm test",
-    "test": "./commands/test"
+    "test": "./commands/test",
+    "start": "node ./server/babel-hook.js"
   },
   "dependencies": {
     "babel-core": "^5.8.23",
@@ -66,7 +67,8 @@
     "scripts": {
       "init": ["", "$ npm run init"],
       "update": ["", "$ npm run update"],
-      "test": ["", "$ npm test"]
+      "test": ["", "$ npm test"],
+      "start": ["", "$ npm start"]
     },
     "dependencies": {
       "babel-core": ["ECMAScript 2015+", "babel-core/polyfill"],
