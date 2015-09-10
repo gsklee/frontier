@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# $ npm run update
+# ================
+
 rm -rf node_modules
 ncu -u
 npm install
