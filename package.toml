@@ -52,6 +52,7 @@ description = ""
 [babel]
   stage = 0
   loose = "all"
+  experimental = true
   optional = [
     "runtime",
     "minification.constantFolding"
