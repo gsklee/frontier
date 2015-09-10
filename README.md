@@ -32,8 +32,8 @@ Setup
 ```bash
 # Replace [LATEST_VERSION] with the latest version number
 $ curl -o- https://raw.githubusercontent.com/creationix/nvm/[LATEST_VERSION]/install.sh | bash
-$ nvm install iojs
-$ nvm alias default iojs
+$ nvm install stable
+$ nvm alias default stable
 ```
 
 ### Install/Update System Packages
