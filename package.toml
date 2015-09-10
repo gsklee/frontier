@@ -13,7 +13,7 @@ description = ""
   preinstall = "npm cache clean"
   precommit = "npm test"
   test = "./commands/test" # $ npm test
-  start = "node ./server/babel-hook.js" # $ npm start
+  start = "./commands/start" # $ npm start
 
 [dependencies]
   # ECMAScript 2015+

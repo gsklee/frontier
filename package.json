@@ -13,7 +13,7 @@
     "preinstall": "npm cache clean",
     "precommit": "npm test",
     "test": "./commands/test",
-    "start": "node ./server/babel-hook.js"
+    "start": "./commands/start"
   },
   "dependencies": {
     "babel-core": "^5.8.23",
