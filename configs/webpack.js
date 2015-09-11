@@ -1,14 +1,12 @@
 // Webpack Configuration
 // =====================
 
+import {assign} from 'bound-native-methods/object';
 import Webpack from 'webpack';
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 export default {
-
-  // Development Settings
-  // --------------------
-
-  devtool: 'eval',
 
   // General Settings
   // ----------------
@@ -38,4 +36,10 @@ export default {
     new Webpack.HotModuleReplacementPlugin(),
     new Webpack.optimize.OccurrenceOrderPlugin(true)
   ]
-};
+}::assign(!isProduction && {
+
+  // Development Settings
+  // --------------------
+
+  devtool: 'eval'
+});
