@@ -4,5 +4,5 @@
 # ================
 
 rm -rf node_modules
-ncu -u
+ncu -a
 npm install
