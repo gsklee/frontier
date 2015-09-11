@@ -2,6 +2,10 @@
 
 # $ npm run init
 # ==============
+#
+# 1. Init Git Flow with all defaults
+# 2. Install required Node.js global packages
+# 3. Install required Node.js local packages
 
 git flow init -d
 npm install -g npm-check-updates babel-eslint semistandard

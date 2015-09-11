@@ -2,6 +2,12 @@
 
 # $ npm run update
 # ================
+#
+# This command offers a slightly radical but surefire way to keep the dependencies up-to-date and prevent any obscure issue associated with failed update attempts.
+#
+# 1. Remove `./node_modules`
+# 2. Update the version numbers of all dependencies, even if they are not the latest but can resolve to the latest
+# 3. Install required Node.js local packages back
 
 rm -rf node_modules
 ncu -a

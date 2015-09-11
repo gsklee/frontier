@@ -1,29 +1,17 @@
-/*
-
-Webpack Configuration
-=====================
-
-*/
+// Webpack Configuration
+// =====================
 
 import Webpack from 'webpack';
 
 export default {
 
-  /*
-
-  Development Settings
-  --------------------
-
-  */
+  // Development Settings
+  // --------------------
 
   devtool: 'eval',
 
-  /*
-
-  General Settings
-  ----------------
-
-  */
+  // General Settings
+  // ----------------
 
   entry: [
     'webpack-hot-middleware/client',
@@ -42,6 +30,8 @@ export default {
       loader: 'babel'
     }]
   },
+
+  // ### [Plugins](http://webpack.github.io/docs/list-of-plugins.html)
 
   plugins: [
     new Webpack.NoErrorsPlugin(),

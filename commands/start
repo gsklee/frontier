@@ -3,8 +3,6 @@
 # $ npm start
 # ===========
 #
-# #### [NODE_PATH=.](https://gist.github.com/branneman/8048520)
-#
-# Eliminate the clutter associated with importing from a deeply nested directory structure.
+# 1. Set `NODE_PATH` to eliminate the clutter associated with [importing from a deeply nested directory structure](https://gist.github.com/branneman/8048520), and execute `./server/server.js` through the Babel hook
 
 NODE_PATH=. node ./server/babel-hook.js

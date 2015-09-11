@@ -2,5 +2,7 @@
 
 # $ npm test
 # ==========
+#
+# 1. Run Semi-Standard style checker against all staged files
 
 semistandard $(git diff --staged --name-only --diff-filter=AM)
