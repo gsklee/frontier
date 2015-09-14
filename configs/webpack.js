@@ -1,10 +1,21 @@
 // Webpack Configuration
 // =====================
+//
+// Import Modules
+// --------------
+//
+// ### NPM Modules
 
 import {assign} from 'bound-native-methods/object';
 import Webpack from 'webpack';
 
+// Define Values
+// -------------
+
 const isProduction = process.env.NODE_ENV === 'production';
+
+// Export Module
+// -------------
 
 export default {
 

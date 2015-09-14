@@ -5,11 +5,14 @@
 //
 // 1. The syntax is not yet supported by V8
 // 2. The require hook relies on overriding the `require` function
+//
+// Import Modules
+// --------------
 
 require('babel-core/register');
 
-// Add Globals
-// -----------
+// Define Globals
+// --------------
 //
 // #### `global.__projectRoot`
 //
