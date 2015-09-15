@@ -33,7 +33,7 @@
     "babel-plugin-react-transform": "^1.0.3",
     "react-transform-webpack-hmr": "^0.1.4",
     "react-transform-catch-errors": "^0.1.2",
-    "redbox-react": "^1.0.3",
+    "redbox-react": "^1.0.4",
     "husky": "^0.10.1"
   },
   "engines": {
