@@ -52,9 +52,12 @@ Set the style to Semi-Standard in `linter-js-standard`:
 
 ![http://i.imgur.com/G902DLS.png](http://i.imgur.com/G902DLS.png)
 
-### Init the Project
+### Init Your Project
 
 ```bash
+# Replace [YOUR_PROJECT] with the name of your project
+$ git clone --origin frontier --branch master --single-branch git@github.com:gsklee/frontier.git [YOUR_PROJECT]
+$ cd [YOUR_PROJECT]
 $ npm run init
 ```
 
