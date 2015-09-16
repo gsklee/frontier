@@ -4,6 +4,10 @@
 // Import Modules
 // --------------
 //
+// ### Node.js Modules
+
+import path from 'path';
+
 // ### NPM Modules
 
 import {assign} from 'bound-native-methods/object';
@@ -38,6 +42,18 @@ export default {
       exclude: /node_modules/,
       loader: 'babel'
     }]
+  },
+
+  // ### [Module Resolution](http://webpack.github.io/docs/configuration.html#resolve)
+  //
+  // Set the `source` directory as the root when resolving local modules to eliminate the clutter associated with importing from a deeply nested directory structure
+  //
+  // #### Why not using `resolve.modulesDirectories`?
+  //
+  // See [https://github.com/webpack/webpack/issues/472](https://github.com/webpack/webpack/issues/472)
+
+  resolve: {
+    root: path.join(global.__projectRoot, 'source')
   },
 
   // ### [Plugins](http://webpack.github.io/docs/list-of-plugins.html)
