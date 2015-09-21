@@ -1,5 +1,5 @@
-// App Main Entry
-// ==============
+// <App/> Main Entry Component
+// ===========================
 //
 // Import Modules
 // --------------
