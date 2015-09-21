@@ -46,11 +46,11 @@ export default {
 
   // ### [Module Resolution](http://webpack.github.io/docs/configuration.html#resolve)
   //
-  // Set the `source` directory as the root when resolving local modules to eliminate the clutter associated with importing from a deeply nested directory structure
+  // Set the `source` directory as the root when resolving local modules to eliminate the clutter associated with importing from a deeply nested directory structure.
   //
-  // #### Why not using `resolve.modulesDirectories`?
+  // #### Why not use `resolve.modulesDirectories`?
   //
-  // See [https://github.com/webpack/webpack/issues/472](https://github.com/webpack/webpack/issues/472)
+  // See [https://github.com/webpack/webpack/issues/472](https://github.com/webpack/webpack/issues/472).
 
   resolve: {
     root: path.join(global.__projectRoot, 'source')
