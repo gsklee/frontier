@@ -41,7 +41,7 @@ description = ""
 
   # Hot Reload
   babel-plugin-react-transform = "^1.0.3"
-  react-transform-webpack-hmr = "^0.1.4"
+  react-transform-hmr = "^0.1.4"
   react-transform-catch-errors = "^0.1.2"
   redbox-react = "^1.0.4"
 
@@ -66,7 +66,7 @@ description = ""
   [babel.extra]
 
     [[react-transform]]
-      target = "react-transform-webpack-hmr"
+      target = "react-transform-hmr"
       imports = ["react"]
       locals = ["module"]
 
