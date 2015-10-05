@@ -67,6 +67,8 @@ export default {
 
   // Development Settings
   // --------------------
+  //
+  // See [https://webpack.github.io/docs/configuration.html#devtool](https://webpack.github.io/docs/configuration.html#devtool).
 
-  devtool: 'eval'
+  devtool: 'cheap-module-eval-source-map'
 });
