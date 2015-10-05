@@ -75,15 +75,15 @@ description = ""
     "react-transform"
   ]
 
-  [babel.extra]
+  [babel.extra.react-transform]
 
-    [[react-transform]]
-      target = "react-transform-hmr"
+    [[transforms]]
+      transform = "react-transform-hmr"
       imports = ["react"]
       locals = ["module"]
 
-    [[react-transform]]
-      target = "react-transform-catch-errors"
+    [[transforms]]
+      transform = "react-transform-catch-errors"
       imports = ["react", "redbox-react"]
 
 [semistandard]
