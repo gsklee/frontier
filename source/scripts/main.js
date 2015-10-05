@@ -1,6 +1,8 @@
 // <App/> Main Entry Component
 // ===========================
 //
+// This is the main entry component of the web app.
+//
 // Import Modules
 // --------------
 //

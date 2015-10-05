@@ -1,6 +1,8 @@
 // Development Server
 // ==================
 //
+// This file defines how the development server works.
+//
 // Import Modules
 // --------------
 //
@@ -26,8 +28,8 @@ const app = Express();
 const compiler = Webpack(WEBPACK_CONFIG);
 const port = 5566;
 
-// Configure Middleware
-// --------------------
+// Configure Express Middleware
+// ----------------------------
 //
 // ### Webpack Dev Middleware
 //
