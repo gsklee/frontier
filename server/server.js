@@ -26,7 +26,7 @@ import WEBPACK_CONFIG from 'configs/webpack';
 
 const app = Express();
 const compiler = Webpack(WEBPACK_CONFIG);
-const port = 5566;
+const PORT = 5566;
 
 // Configure Express Middleware
 // ----------------------------
@@ -53,6 +53,6 @@ app.get('*', (request, response, next) =>
 // Listen for Connection
 // ---------------------
 
-app.listen(port, 'localhost', error =>
-  console.log(error || `Listening at http://localhost:${port}`)
+app.listen(PORT, 'localhost', error =>
+  console.log(error || `Listening at http://localhost:${PORT}`)
 );
