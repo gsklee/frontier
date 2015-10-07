@@ -1,7 +1,7 @@
-// <App/> Main Entry Component
-// ===========================
+// Web App Initter
+// ===============
 //
-// This is the main entry component of the web app.
+// This file configures Redux and kicks off the rendering of the web app.
 //
 // Import Modules
 // --------------
@@ -9,21 +9,45 @@
 // ### NPM Modules
 
 import 'babel-core/polyfill';
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'; // Required by JSX
+import {render} from 'react-dom';
+import {applyMiddleware, createStore} from 'redux';
+import ReduxThunk from 'redux-thunk';
+import ReduxPromise from 'redux-promise';
+import createLogger from 'redux-logger';
+import {Provider} from 'react-redux';
 
-// Define <App/>
-// -------------
+// ### Local Modules
 
-class App extends React.Component {
-  render () {
-    return (
-      <div>Hello, world!</div>
-    );
-  }
+import rootReducer from 'scripts/reducers';
+import App from 'scripts/containers/App';
+
+// Configure Redux Store
+// ---------------------
+//
+// Apply the following [Redux middleware](https://github.com/rackt/redux/blob/master/docs/advanced/Middleware.md):
+//
+// * [Redux Thunk](https://github.com/gaearon/redux-thunk) - Enable function-based [async actions](https://github.com/rackt/redux/blob/master/docs/advanced/AsyncActions.md)
+// * [Redux Promise](https://github.com/acdlite/redux-promise) - Enable promise-based async actions
+// * [Redux Logger](https://github.com/fcomb/redux-logger) - Add action logger
+
+function configureStore (initialState) {
+  return applyMiddleware(
+    ReduxThunk,
+    ReduxPromise,
+    createLogger()
+  )(createStore)(rootReducer, initialState);
 }
 
-// Render <App/>
-// -------------
+// Render the Web App
+// ------------------
+//
+// Render the React entry container `< App/>` - which is wrapped inside the Redux container `< Provider/>` - in `<#app/>`.
 
-ReactDOM.render(<App/>, document.getElementById('app'));
+render(
+  <Provider store = {configureStore()}>
+    <App/>
+  </Provider>,
+
+  document.getElementById('app')
+);
