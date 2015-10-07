@@ -6,6 +6,7 @@
 // Do not use ES2015 Import/Export within *this very file* because:
 //
 // 1. The syntax is not yet supported by V8
+//
 // 2. The hooking mechanism relies on overriding the `require` function
 //
 // Import Modules
