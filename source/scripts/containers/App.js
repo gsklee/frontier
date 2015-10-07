@@ -23,11 +23,12 @@ import * as actions from 'scripts/actions';
 export default @connect(state => state, actions) class App extends React.Component {
   static propTypes = {
     example: React.PropTypes.object.isRequired,
-    increment: React.PropTypes.func.isRequired
+    increment: React.PropTypes.func.isRequired,
+    decrement: React.PropTypes.func.isRequired
   }
 
   render () {
-    const {example, increment} = this.props;
+    const {example, increment, decrement} = this.props;
 
     return (
       <main>
@@ -35,7 +36,7 @@ export default @connect(state => state, actions) class App extends React.Compone
         <section>
           <header>Counter Example</header>
           <p>{example.count}</p>
-          <button onClick = {increment}>Increment</button>
+          <button onClick = {increment}>Increment</button><button onClick = {decrement}>Decrement</button>
         </section>
       </main>
     );

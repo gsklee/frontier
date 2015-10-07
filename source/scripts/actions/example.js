@@ -16,5 +16,6 @@ import {createAction} from 'redux-actions';
 // This module contains the following Redux actions.
 
 export default {
-  increment: createAction('increment')
+  increment: createAction('increment'),
+  decrement: createAction('decrement')
 };
