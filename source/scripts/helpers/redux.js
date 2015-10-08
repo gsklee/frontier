@@ -16,9 +16,9 @@ import {keys} from 'bound-native-methods/object';
 // This module contains the following helpers.
 
 export default {
-  createReducers (schema) {
+  createReducers (schema, defaultState) {
     return schema::keys().reduce((reducers, stateName) => {
-      reducers[stateName] = (state = 0, action) => {
+      reducers[stateName] = (state = defaultState[stateName], action) => {
         let transitions = schema[stateName];
 
         return transitions.hasOwnProperty(action.type) ? transitions[action.type](state, action) : state;

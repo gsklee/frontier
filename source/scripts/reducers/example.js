@@ -8,6 +8,7 @@
 //
 // ### Local Modules
 
+import {defaultState} from 'scripts/configs';
 import {createReducers} from 'scripts/helpers';
 
 // Export Module
@@ -20,7 +21,6 @@ import {createReducers} from 'scripts/helpers';
 export default createReducers({
   count: {
     increment: (state, action) => state + 1,
-
     decrement: (state, action) => state - 1
   }
-});
+}, defaultState);
