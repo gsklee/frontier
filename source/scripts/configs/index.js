@@ -10,6 +10,8 @@
 
 export default {
   defaultState: {
-    count: 0
+    example: {
+      count: 0
+    }
   }
 };
