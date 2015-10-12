@@ -1,24 +1,11 @@
-// Root Reducer
-// ============
+// Reducers Exporter
+// =================
 //
-// This file simply combines and exports all other Redux reducers.
+// This file simply exports all other Redux reducers.
 //
-// Import Modules
-// --------------
-//
-// ### NPM Modules
-
-import {combineReducers} from 'redux';
-
-// ### Local Modules
-
-import exampleReducer from 'scripts/reducers/example';
-
 // Export Module
 // -------------
 //
-// This module combines all other Redux reducers into the root reducer.
+// This module is an exporter for all other modules in the same directory.
 
-export default combineReducers({
-  example: combineReducers(exampleReducer)
-});
+export * as example from 'scripts/reducers/example';

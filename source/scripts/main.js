@@ -9,9 +9,10 @@
 // ### NPM Modules
 
 import 'babel-core/polyfill';
+import {keys} from 'bound-native-methods/object';
 import React from 'react'; // Required by JSX
 import {render} from 'react-dom';
-import {applyMiddleware, createStore} from 'redux';
+import {applyMiddleware, combineReducers, createStore} from 'redux';
 import ReduxThunk from 'redux-thunk';
 import ReduxPromise from 'redux-promise';
 import createLogger from 'redux-logger';
@@ -19,7 +20,8 @@ import {Provider} from 'react-redux';
 
 // ### Local Modules
 
-import rootReducer from 'scripts/reducers';
+import {defaultState} from 'scripts/configs';
+import * as reducers from 'scripts/reducers';
 import App from 'scripts/containers/App';
 
 // Configure Redux Store
@@ -36,7 +38,16 @@ function configureStore (initialState) {
     ReduxThunk,
     ReduxPromise,
     createLogger()
-  )(createStore)(rootReducer, initialState);
+  )(createStore)(
+    combineReducers(
+      defaultState::keys().reduce((metareducers, stateName) => {
+        metareducers[stateName] = combineReducers(reducers[stateName]);
+
+        return metareducers;
+      }, {})
+    ),
+
+    initialState);
 }
 
 // Render the Web App
