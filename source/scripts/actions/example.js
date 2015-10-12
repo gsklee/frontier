@@ -6,16 +6,16 @@
 // Import Modules
 // --------------
 //
-// ### NPM Modules
+// ### Local Modules
 
-import {createAction} from 'redux-actions';
+import {createActions} from 'scripts/helpers';
 
 // Export Module
 // -------------
 //
 // This module contains the following Redux actions.
 
-export default {
-  increment: createAction('increment'),
-  decrement: createAction('decrement')
-};
+export default createActions(
+  'increment',
+  'decrement'
+);

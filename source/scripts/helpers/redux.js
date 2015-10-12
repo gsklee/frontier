@@ -9,6 +9,7 @@
 // ### NPM Modules
 
 import {keys} from 'bound-native-methods/object';
+import {createAction} from 'redux-actions';
 
 // Export Module
 // -------------
@@ -16,6 +17,14 @@ import {keys} from 'bound-native-methods/object';
 // This module contains the following helpers.
 
 export default {
+  createActions (...actionNames) {
+    return actionNames.reduce((actions, actionName) => {
+      actions[actionName] = createAction(actionName);
+
+      return actions;
+    }, {});
+  },
+
   createReducers (schema, defaultState) {
     return schema::keys().reduce((reducers, stateName) => {
       reducers[stateName] = (state = defaultState[stateName], action) => {
