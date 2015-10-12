@@ -39,6 +39,11 @@ function configureStore (initialState) {
     ReduxPromise,
     createLogger()
   )(createStore)(
+
+    // ### Create the Root Reducer
+    //
+    // Create the root reducer by combining meta-reducers, which are formed by organizing reducers according to the shape of the state tree.
+
     combineReducers(
       defaultState::keys().reduce((metareducers, stateName) => {
         metareducers[stateName] = combineReducers(reducers[stateName]);
