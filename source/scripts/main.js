@@ -47,7 +47,8 @@ function configureStore (initialState) {
       }, {})
     ),
 
-    initialState);
+    initialState
+  );
 }
 
 // Render the Web App
