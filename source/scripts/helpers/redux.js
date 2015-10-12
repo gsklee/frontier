@@ -17,6 +17,9 @@ import {createAction} from 'redux-actions';
 // This module contains the following helpers.
 
 export default {
+
+  // > `createActions` : Function
+
   createActions (...actionNames) {
     return actionNames.reduce((actions, actionName) => {
       actions[actionName] = createAction(actionName);
@@ -24,6 +27,8 @@ export default {
       return actions;
     }, {});
   },
+
+  // > `createReducers` : Function
 
   createReducers (schema, defaultState) {
     return schema::keys().reduce((reducers, stateName) => {
