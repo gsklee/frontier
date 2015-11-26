@@ -61,6 +61,14 @@ $ cd [YOUR_PROJECT]
 $ npm run init
 ```
 
+Update
+------
+
+```bash
+$ brew update
+$ brew upgrade
+```
+
 Blanks
 ------
 
