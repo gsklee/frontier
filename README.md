@@ -79,3 +79,11 @@ Blanks
 |              | 5:19 |
 |              | 8:13 |
 | source/index.html | 6:12 |
+
+
+Yarn
+----
+```bash
+$ yarn config set init-author-name "G. Kay Lee"
+$ yarn config set init-author-email "balancetraveller+github@gmail.com"
+```
