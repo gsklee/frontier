@@ -39,7 +39,7 @@ $ nvm alias default node
 ### Install/Update System Packages
 
 ```bash
-$ brew install git git-flow-avh
+$ brew install git yarn
 ```
 
 ### Install Atom Packages
